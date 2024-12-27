@@ -61,9 +61,10 @@ public class Notepad extends JFrame implements ActionListener {
         selectall.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.CTRL_MASK));
         selectall.addActionListener(this);
 
+        JMenu texttospeech = new JMenu("SpeechAssistant"); 
         JMenuItem textToSpeech = new JMenuItem("Text to Speech");
         textToSpeech.addActionListener(this);
-        edit.add(textToSpeech);
+        texttospeech.add(textToSpeech);
 
         // Help menu
         JMenu about = new JMenu("Help");
@@ -82,6 +83,7 @@ public class Notepad extends JFrame implements ActionListener {
         menuBar.add(file);
         menuBar.add(edit);
         menuBar.add(about);
+        menuBar.add(texttospeech);
 
         file.add(newdoc);
         file.add(open);
